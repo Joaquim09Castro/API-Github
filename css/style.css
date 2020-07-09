@@ -1,0 +1,79 @@
+html {
+  background-color: #121212ea;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+body {
+  width: 70%;
+  background-color: #4a4a4a;
+  height: 100%;
+  border-radius: 4px;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0 3px;
+  border-bottom: 3px #2f2f2f solid;
+  border-radius: 2px;
+}
+
+#page-title {
+  font-size: 30px;
+  color: #800000;
+  text-shadow: #1a1a1a 1px 1px 2px;
+}
+
+#form-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 8px;
+}
+
+#username-input {
+  margin-top: 4px;
+  border-radius: 10px;
+  border-width: 2px;
+  width: 75%;
+  text-align: center;
+}
+
+#submit-input {
+  margin-top: 6px;
+  width: 75%;
+  border-radius: 10px;
+}
+
+main {
+  background-color: #727272;
+  border-radius: 4px;
+  height: 85%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin: 2.2px 0 0;
+  border-top: 3px #2f2f2f solid;
+  border-radius: 3px;
+  padding: 20px 0;
+  background-color: #4a4a4a;
+}
+
+#footer-text {
+  font-size: 15px;
+  color: #800000;
+  text-shadow: #060606 1px 1px 2px;
+}
+
+#api-link {
+  color: #6f0f7f;
+}
