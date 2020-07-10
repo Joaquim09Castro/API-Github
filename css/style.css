@@ -9,13 +9,10 @@ body {
   width: 70%;
   background-color: #4a4a4a;
   height: 100%;
-  border-radius: 4px;
+  border-radius: 12px;
 }
 
 header {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   text-align: center;
   margin: 10px 0 3px;
   border-bottom: 3px #2f2f2f solid;
@@ -24,8 +21,19 @@ header {
 
 #page-title {
   font-size: 30px;
-  color: #800000;
-  text-shadow: #1a1a1a 1px 1px 2px;
+  padding-bottom: 10px;
+  color: #000080;
+  text-shadow: #7a7a7a 1px 1px 2px;
+}
+
+main {
+  background-color: #727272;
+  border-radius: 4px;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 #form-input-container {
@@ -33,27 +41,20 @@ header {
   flex-direction: column;
   align-items: center;
   align-content: center;
-  margin-bottom: 8px;
+  margin: 20px 0;
 }
 
 #username-input {
   margin-top: 4px;
   border-radius: 10px;
   border-width: 2px;
-  width: 75%;
   text-align: center;
 }
 
 #submit-input {
   margin-top: 6px;
-  width: 75%;
+  width: 100%;
   border-radius: 10px;
-}
-
-main {
-  background-color: #727272;
-  border-radius: 4px;
-  height: 85%;
 }
 
 footer {
@@ -70,10 +71,30 @@ footer {
 
 #footer-text {
   font-size: 15px;
-  color: #800000;
-  text-shadow: #060606 1px 1px 2px;
+  color: #000080;
+  text-shadow: #737373 1px 1px 1px;
 }
 
 #api-link {
-  color: #6f0f7f;
+  color: #401a8d;
 }
+
+#username-input:focus, #submit-input:focus {
+  outline: none;
+}
+
+#submit-input:active {
+  background-color: rgb(168, 168, 168);
+  transition: 0.07s;
+}
+
+#api-link:hover {
+  text-shadow: black 1px 1px;
+  color: #af1f4f;
+}
+
+/*
+- Mudar README.md
+- Mudar nome do diretório
+- Checar por mais erros de sintaxe
+*/

@@ -8,29 +8,32 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
 
-  <title>Codewars User Viewer</title>
+  <title>Github User Viewer</title>
 </head>
 
 <body>
   <header>
-    <h1 id="page-title">Codewars User Viewer</h1>
+    <h1 id="page-title">Github User Viewer</h1>
+  </header>
 
+  <main>
     <div id="form-input-container">
       <input type="text" name="username-input" id="username-input" placeholder="Enter Username">
       <input type="submit" value="Search" id="submit-input">
     </div>
-  </header>
 
-  <main>
+    <div id="result-input">
+
+    </div>
   </main>
 
   <footer>
-
     <p id="footer-text">Made using 
-      <a id="api-link" href="https://dev.codewars.com/#api-reference">Codewars API</a>
+      <a id="api-link" href="https://developer.github.com/v3/">Github API</a>
     </p>
-
   </footer>
+
+  <script src="./javascript/controllers/GitUserController.js"></script>
 </body>
 
 </html>
