@@ -22,7 +22,7 @@
       <input type="submit" value="Search" id="submit-input">
     </div>
 
-    <div id="result-input">
+    <div id="results-container">
 
     </div>
   </main>
@@ -34,6 +34,20 @@
   </footer>
 
   <script src="./javascript/controllers/GitUserController.js"></script>
+  <script>
+    let usernameInput = document.getElementById("username-input");
+    let submitInput = document.getElementById("submit-input");
+
+    submitInput.onclick = ()=> {
+      if (!usernameInput.value == "") {
+        let search = new GitUserController(usernameInput.value);
+        search.getUserInfo();
+      } else {
+        alert("Please enter a Github username");
+        throw "No username on search box";
+      }
+    }
+  </script>
 </body>
 
 </html>

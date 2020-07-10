@@ -6,10 +6,12 @@ html {
 }
 
 body {
+  position: relative;
   width: 70%;
   background-color: #4a4a4a;
-  height: 100%;
   border-radius: 12px;
+  height: 100%;
+  min-height: 100%;
 }
 
 header {
@@ -41,7 +43,7 @@ main {
   flex-direction: column;
   align-items: center;
   align-content: center;
-  margin: 20px 0;
+  margin: 20px 0 20px;
 }
 
 #username-input {
@@ -57,12 +59,20 @@ main {
   border-radius: 10px;
 }
 
+#results-container {
+  background-color: #929292;
+  width: 80%;
+  padding: 15px;
+}
+
 footer {
   display: flex;
+  position: relative;
+  bottom: 0;
+  width: 100%;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  margin: 2.2px 0 0;
   border-top: 3px #2f2f2f solid;
   border-radius: 3px;
   padding: 20px 0;
@@ -92,9 +102,3 @@ footer {
   text-shadow: black 1px 1px;
   color: #af1f4f;
 }
-
-/*
-- Mudar README.md
-- Mudar nome do diretório
-- Checar por mais erros de sintaxe
-*/
