@@ -1,25 +1,25 @@
-
 class GitUserController {
-  constructor(username) {
-    this._url = "https://api.github.com/users/";
-    this._username = username;
+  constructor() {
+    throw ("This class has no instance");
   }
 
-  getUserInfo() {
+  static getUser(requestUrl) {
     let xhr = new XMLHttpRequest();
-    
-    xhr.open("GET",`${this._url + this._username}/repos`,true);
+    xhr.open("GET", requestUrl);
 
     xhr.onload = () => {
-      if (xhr.status == 200) {
-        const teste  = JSON.parse(xhr.responseText);
-        for (let i = 0; i < teste.length; i++) {
-          console.log(teste[i].name);
-        }
-      } else {throw "Deu ruim";}
-    };
+      let responseJson = JSON.parse(xhr.responseText);
 
+      let userInfo = new GitUserModel(
+        responseJson.html_url,
+        responseJson.avatar_url,
+        responseJson.login,
+        responseJson.name,
+        responseJson.followers,
+        responseJson.following
+      );
+      htmlElements.userContainer.innerHTML = GitUserView.showUser(userInfo.getUserJson());
+    };
     xhr.send();
   }
 }
-

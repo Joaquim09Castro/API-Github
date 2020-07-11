@@ -22,32 +22,26 @@
       <input type="submit" value="Search" id="submit-input">
     </div>
 
-    <div id="results-container">
+    <div id="user-container">
+    </div>
 
+    <div id="repos-container">
     </div>
   </main>
 
   <footer>
-    <p id="footer-text">Made using 
+    <p id="footer-text">Made using
       <a id="api-link" href="https://developer.github.com/v3/">Github API</a>
     </p>
   </footer>
 
+  <script src="./javascript/index.js"></script>
   <script src="./javascript/controllers/GitUserController.js"></script>
-  <script>
-    let usernameInput = document.getElementById("username-input");
-    let submitInput = document.getElementById("submit-input");
-
-    submitInput.onclick = ()=> {
-      if (!usernameInput.value == "") {
-        let search = new GitUserController(usernameInput.value);
-        search.getUserInfo();
-      } else {
-        alert("Please enter a Github username");
-        throw "No username on search box";
-      }
-    }
-  </script>
+  <script src="./javascript/controllers/GitReposController.js"></script>
+  <script src="./javascript/models/GitUserModel.js"></script>
+  <script src="./javascript/models/GitReposModel.js"></script>
+  <script src="./javascript/views/GitUserView.js"></script>
+  <script src="./javascript/views/GitReposView.js"></script>
 </body>
 
 </html>
