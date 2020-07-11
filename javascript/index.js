@@ -11,6 +11,7 @@ htmlElements.searchBtn.onclick = () => {
 
   if (username != "") {
     htmlElements.userContainer.innerHTML = "";
+    htmlElements.reposContainer.innerHTML = "";
     htmlElements.inputField.value = "";
 
     GitUserController.getUser(apiUrl + username);
